@@ -49,8 +49,42 @@
 			margin: 0;
 		}
 
-		main img {
+		main .cotwImg {
+			width: 900px;
+			height: 600px;
 			border-radius: 40px;
+			overflow: hidden;
+			justify-content: center;
+            align-items: center;
+			display: flex;
+		}
+
+		main .cotwImg::before {
+			content: '';
+			background: url('images/COTWLogo.svg') no-repeat center center/cover;
+			position: absolute;
+			z-index: 1;
+			width: calc(900px/2);
+			height: calc(600px/2);
+			filter: blur(0) opacity(1);
+			transition: all 0.3s ease;
+		}
+
+		main .cotwImg:hover {
+			cursor: pointer;
+		}
+
+		main .cotwImg:hover::before {
+			filter: blur(10px) opacity(0);
+		}
+
+		main .cotwImg img {
+			filter: blur(10px) brightness(0.8);
+			transition: all 0.5s ease;
+		}
+
+		main .cotwImg:hover img {
+			filter: blur(0);
 		}
 
 		footer {
@@ -77,7 +111,10 @@
 
 	<main>
 		<h1>Car of the Week</h1>
-		<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/1969_Chevolet_Camaro_SS%2C_Tallahassee_Automobile_Museum.jpg/960px-1969_Chevolet_Camaro_SS%2C_Tallahassee_Automobile_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="1969 Chevolet Camaro SS, Tallahassee Automobile Museum, Tallahassee, Leon County, Florida">
+		<div class="cotwImg">
+			<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/1969_Chevolet_Camaro_SS%2C_Tallahassee_Automobile_Museum.jpg/960px-1969_Chevolet_Camaro_SS%2C_Tallahassee_Automobile_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+				alt="1969 Chevolet Camaro SS, Tallahassee Automobile Museum, Tallahassee, Leon County, Florida">
+		</div>
 	</main>
 
 	<footer>
