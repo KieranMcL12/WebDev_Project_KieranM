@@ -5,50 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home - Wheels of Fire</title>
+	<link rel="stylesheet" href="styles/main.css">
 	<style>
-		html,
-		body {
-			margin: 0;
-			padding: 0;
-		}
-
-		ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			background-color: #333333;
-		}
-
-		li {
-			float: left;
-		}
-
-		li a {
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 16px;
-			text-decoration: none;
-		}
-
-		li:not(:first-child) a:hover {
-			background-color: #111111;
-		}
-
-		li.active {
-			text-decoration: underline;
-			text-decoration-color: white;
-		}
-
-		main {
-			padding: 20px;
-		}
-
-		main h1 {
-			margin: 0;
-		}
-
 		main .cotwImg {
 			width: 900px;
 			height: 600px;
@@ -70,11 +28,25 @@
 			transition: all 0.3s ease;
 		}
 
+		main .cotwImg::after {
+			content: '☝ Hover over the logo to reveal this week\'s Car of the Week ☝';
+			position: absolute;
+			z-index: 1;
+			transform: translateY(30vh);
+			font-style: italic;
+			font-size: small;
+			color: whitesmoke;
+			animation: 1.5s ease 0s infinite alternate bounce;
+			filter: blur(0) opacity(1);
+			transition: all 0.3s ease;
+		}
+
 		main .cotwImg:hover {
 			cursor: pointer;
 		}
 
-		main .cotwImg:hover::before {
+		main .cotwImg:hover::before,
+		main .cotwImg:hover::after {
 			filter: blur(10px) opacity(0);
 		}
 
@@ -87,12 +59,10 @@
 			filter: blur(0);
 		}
 
-		footer {
-			position: relative;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			text-align: center;
+		@keyframes bounce {
+			0% {
+				transform: translateY(29vh);
+			}
 		}
 	</style>
 </head>
