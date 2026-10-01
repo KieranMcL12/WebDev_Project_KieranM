@@ -51,12 +51,34 @@
 		}
 
 		main .cotwImg img {
+			width: 900px;
+			height: 600px;
+			justify-content: center;
+            align-items: center;
 			filter: blur(10px) brightness(0.8);
 			transition: all 0.5s ease;
 		}
 
+		main .cotwImg img + b::before {
+			content: 'This week\'s Car of the Week: The 1969 Chevolet Camaro SS';
+			position: absolute;
+			z-index: 1;
+			transform: translate(-68vh, 34vh);
+			font-style: italic;
+			font-size: small;
+			font-weight: 500;
+			color: gray;
+			text-decoration: underline;
+			filter: blur(10px) opacity(0);
+			transition: all 0.3s ease;
+		}
+
 		main .cotwImg:hover img {
 			filter: blur(0);
+		}
+
+		main .cotwImg:hover img + b::before {
+			filter: blur(0) opacity(1);
 		}
 
 		@keyframes bounce {
@@ -83,7 +105,7 @@
 		<h1>Car of the Week</h1>
 		<div class="cotwImg">
 			<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/1969_Chevolet_Camaro_SS%2C_Tallahassee_Automobile_Museum.jpg/960px-1969_Chevolet_Camaro_SS%2C_Tallahassee_Automobile_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-				alt="1969 Chevolet Camaro SS, Tallahassee Automobile Museum, Tallahassee, Leon County, Florida">
+				alt="1969 Chevolet Camaro SS, Tallahassee Automobile Museum, Tallahassee, Leon County, Florida"><b></b>
 		</div>
 	</main>
 
