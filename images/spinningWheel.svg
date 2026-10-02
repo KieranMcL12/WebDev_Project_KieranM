@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 150" width="350" height="150">
+  <defs>
+    <style>
+      .logo-wheel {
+        transform-origin: 250px 75px;
+        animation: spin-fast 0.4s linear infinite;
+      }
+      .fire-back {
+        transform-origin: 120px 75px;
+        animation: pulse 0.12s ease-in-out infinite alternate;
+      }
+      .fire-mid {
+        transform-origin: 120px 75px;
+        animation: pulse 0.18s ease-in-out infinite alternate-reverse;
+      }
+      .fire-front {
+        transform-origin: 120px 75px;
+        animation: pulse 0.15s ease-in-out infinite alternate;
+      }
+      .speed-line {
+        stroke-dasharray: 40;
+        animation: dash 0.6s linear infinite;
+      }
+      .speed-line-fast {
+        stroke-dasharray: 60;
+        animation: dash 0.4s linear infinite reverse;
+      }
+      
+      @keyframes spin-fast {
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes pulse {
+        0% { transform: scaleX(0.97) scaleY(0.95); }
+        100% { transform: scaleX(1.03) scaleY(1.05); }
+      }
+      @keyframes dash {
+        0% { stroke-dashoffset: 80; }
+        100% { stroke-dashoffset: 0; }
+      }
+    </style>
+  </defs>
+
+  <!-- Animated Speed/Ground Lines -->
+  <g stroke="#e2e8f0" stroke-linecap="round" stroke-width="3">
+    <line x1="20" y1="135" x2="330" y2="135" class="speed-line" />
+    <line x1="10" y1="145" x2="280" y2="145" class="speed-line-fast" />
+    <line x1="50" y1="15" x2="150" y2="15" class="speed-line" stroke-width="2" />
+  </g>
+
+  <!-- 3-Tone Layered Flames -->
+  <g>
+    <!-- Base Red Flame -->
+    <path class="fire-back" d="M250,115 C170,125 90,115 20,95 C80,90 120,85 140,70 C80,65 50,45 30,20 C100,35 150,25 250,45 Z" fill="#dc2626" />
+    <!-- Mid Orange Flame -->
+    <path class="fire-mid" d="M250,105 C190,110 120,105 50,85 C100,80 140,75 160,60 C110,55 80,45 60,30 C120,40 160,30 250,55 Z" fill="#ea580c" />
+    <!-- Core Yellow Flame -->
+    <path class="fire-front" d="M250,95 C210,95 150,95 90,80 C130,75 160,70 180,60 C140,55 120,45 100,40 C150,50 180,45 250,65 Z" fill="#fbbf24" />
+  </g>
+
+  <!-- Detailed Wheel -->
+  <g class="logo-wheel">
+    <!-- Tire Base -->
+    <circle cx="250" cy="75" r="45" fill="#1e293b" />
+    <!-- Inner Tire Tread detail -->
+    <circle cx="250" cy="75" r="38" fill="none" stroke="#0f172a" stroke-width="6" stroke-dasharray="12 4"/>
+    
+    <!-- Outer Rim -->
+    <circle cx="250" cy="75" r="32" fill="#f1f5f9" />
+    <!-- Inner Rim Shadow -->
+    <circle cx="250" cy="75" r="28" fill="#cbd5e1" />
+    
+    <!-- Center Hub -->
+    <circle cx="250" cy="75" r="8" fill="#475569"/>
+    <circle cx="250" cy="75" r="3" fill="#0f172a"/>
+
+    <!-- Alloy Spokes -->
+    <g stroke="#94a3b8" stroke-width="8" stroke-linecap="round">
+      <path d="M250 47 L250 103" />
+      <path d="M222 75 L278 75" />
+      <path d="M230 55 L270 95" />
+      <path d="M230 95 L270 55" />
+    </g>
+    <!-- Spoke Highlights for depth -->
+    <g stroke="#f8fafc" stroke-width="2" stroke-linecap="round">
+      <path d="M248 50 L248 100" />
+      <path d="M225 73 L275 73" />
+    </g>
+  </g>
+</svg>

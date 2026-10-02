@@ -4,6 +4,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
 }
 
 ul {
@@ -24,15 +25,39 @@ li a {
 	text-align: center;
 	padding: 16px;
 	text-decoration: none;
+	font-family: 'SCHABO Condensed';
+	font-size: 17pt;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+li:not(:first-child) a {
+	width: 80px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' opacity='0' viewBox='0 0 20 20'%3E%3Cdefs%3E%3Cpattern id='p' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M -1 1 L 1 -1 M 0 20 L 20 0 M 19 21 L 21 19' stroke='%23333333' stroke-width='4' fill='none'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='20' height='20' fill='%23222222'/%3E%3Crect width='20' height='20' fill='url(%23p)' opacity='1'/%3E%3C/svg%3E");
+	background-repeat: repeat;
+	transition: all 0.1s ease;
 }
 
 li:not(:first-child) a:hover {
-	background-color: #111111;
+	/* background-color: #111111; */
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' opacity='1' viewBox='0 0 20 20'%3E%3Cdefs%3E%3Cpattern id='p' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M -1 1 L 1 -1 M 0 20 L 20 0 M 19 21 L 21 19' stroke='%23333333' stroke-width='4' fill='none'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='20' height='20' fill='%23222222'/%3E%3Crect width='20' height='20' fill='url(%23p)' opacity='1'/%3E%3C/svg%3E");
+	background-repeat: repeat;
 }
 
 li.active {
+	text-decoration: underline dashed;
+	text-decoration-color: white;
+}
+
+li.active:hover {
 	text-decoration: underline;
 	text-decoration-color: white;
+}
+
+.siteLogo {
+	margin: 0;
+	padding: 0;
+	height: 20px;
 }
 
 main {

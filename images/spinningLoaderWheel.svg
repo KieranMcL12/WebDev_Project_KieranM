@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <style>
+      .wheel {
+        transform-origin: 70px 50px;
+        animation: spin 0.3s linear infinite;
+      }
+      .flame-outer {
+        transform-origin: 30px 50px;
+        animation: flicker 0.15s ease-in-out infinite alternate;
+      }
+      .flame-inner {
+        transform-origin: 30px 50px;
+        animation: flicker 0.2s ease-in-out infinite alternate-reverse;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes flicker {
+        0% { transform: scaleY(0.9) scaleX(0.95); opacity: 0.85; }
+        100% { transform: scaleY(1.05) scaleX(1.05); opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Flames (Rendered behind the wheel) -->
+  <g class="flame-outer">
+    <path d="M70,80 C40,85 10,75 0,60 C25,55 40,55 50,45 C25,40 10,25 5,10 C30,20 50,15 70,30 Z" fill="#FF4500" />
+  </g>
+  <g class="flame-inner">
+    <path d="M70,70 C45,70 20,65 10,55 C30,50 45,45 55,35 C35,30 20,20 15,15 C40,20 55,25 70,40 Z" fill="#FFB400" />
+  </g>
+
+  <!-- The Wheel -->
+  <g class="wheel">
+    <!-- Tire -->
+    <circle cx="70" cy="50" r="22" fill="#2c2c2c" stroke="#1a1a1a" stroke-width="4"/>
+    <!-- Rim -->
+    <circle cx="70" cy="50" r="14" fill="#e0e0e0" stroke="#999" stroke-width="1.5"/>
+    <!-- Hubcap/Center -->
+    <circle cx="70" cy="50" r="4" fill="#333"/>
+    <!-- Spokes -->
+    <g stroke="#999" stroke-width="3.5" stroke-linecap="round">
+      <line x1="70" y1="36" x2="70" y2="64" />
+      <line x1="56" y1="50" x2="84" y2="50" />
+      <line x1="60" y1="40" x2="80" y2="60" />
+      <line x1="60" y1="60" x2="80" y2="40" />
+    </g>
+  </g>
+</svg>
