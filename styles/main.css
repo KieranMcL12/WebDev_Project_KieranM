@@ -7,6 +7,11 @@ body {
 	scroll-behavior: smooth;
 }
 
+body {
+	color: whitesmoke;
+	background-color: #222222;
+}
+
 ul {
 	list-style-type: none;
 	margin: 0;
