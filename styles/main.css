@@ -1,4 +1,11 @@
-@import url("/Fonts/fonts.css");
+/* @import url("/Fonts/fonts.css"); */
+
+@font-face {
+	font-family: 'SCHABO Condensed';
+	font-style: normal;
+	font-weight: normal;
+	src: url("/Fonts/Schabo/SCHABO-Condensed.otf") format("opentype");
+}
 
 html,
 body {
