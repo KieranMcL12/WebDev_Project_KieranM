@@ -62,7 +62,7 @@
 		main .cotwImg img+b::before {
 			content: 'This week\'s Car of the Week: The 1969 Chevolet Camaro SS';
 			position: absolute;
-			left: 20px;
+			left: 40px;
 			top: 90vh;
 			z-index: -100;
 			font-style: italic;
@@ -81,8 +81,8 @@
 
 		main .cotwImg:hover img+b::before {
 			filter: blur(0) opacity(1);
-			top: 105vh;
-			transition-delay: 0.5s, 0.55s;
+			top: 120vh;
+			transition-delay: 0.5s, 0.65s;
 		}
 
 		@keyframes bounce {
@@ -107,28 +107,34 @@
 	</header>
 
 	<main>
-		<h1>Car of the Week</h1>
-		<div id="cotwImg" class="cotwImg">
-			<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/1969_Chevolet_Camaro_SS%2C_Tallahassee_Automobile_Museum.jpg/960px-1969_Chevolet_Camaro_SS%2C_Tallahassee_Automobile_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-				alt="1969 Chevolet Camaro SS, Tallahassee Automobile Museum, Tallahassee, Leon County, Florida">
-			<b></b>
-		</div>
+		<section class="siteTitle">
+			<h1>Wheels of Fire</h1>
+		</section>
 
-		<div id="cotwModal" class="modal">
-			<!-- Modal content -->
-			<div class="modal-content">
-				<div class="modal-header">
-					<span class="close">&times;</span>
-					<span>Car of the Week</span>
-				</div>
-				<div class="modal-body">
-					<p>This week's Car of the Week: The 1969 Chevolet Camaro SS</p>
-				</div>
-				<div class="modal-footer">
-					<h3><a href="https://en.wikipedia.org/wiki/Chevrolet_Camaro_(first_generation)">Learn More</a></h3>
+		<section class="mainContent">
+			<h1>Car of the Week</h1>
+			<div id="cotwImg" class="cotwImg">
+				<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/1969_Chevolet_Camaro_SS%2C_Tallahassee_Automobile_Museum.jpg/960px-1969_Chevolet_Camaro_SS%2C_Tallahassee_Automobile_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+					alt="1969 Chevolet Camaro SS, Tallahassee Automobile Museum, Tallahassee, Leon County, Florida">
+				<b></b>
+			</div>
+			
+			<div id="cotwModal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<span class="close">&times;</span>
+						<span>Car of the Week</span>
+					</div>
+					<div class="modal-body">
+						<p>This week's Car of the Week: The 1969 Chevolet Camaro SS</p>
+					</div>
+					<div class="modal-footer">
+						<h3><a href="https://en.wikipedia.org/wiki/Chevrolet_Camaro_(first_generation)">Learn More</a></h3>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	</main>
 
 	<footer>
