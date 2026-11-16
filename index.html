@@ -4,17 +4,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home - Wheels of Fire</title>
+	<title>Home - Wheels on Fire</title>
 	<link rel="stylesheet" href="./styles/main.css">
 	<style>
 		main .cotwImg {
-			width: 900px;
-			height: 600px;
+			width: 100%;
+			max-width: 900px;
+			aspect-ratio: 3 / 2;
 			border-radius: 40px;
 			overflow: hidden;
 			justify-content: center;
 			align-items: center;
 			display: flex;
+			position: relative;
 		}
 
 		main .cotwImg::before {
@@ -22,8 +24,8 @@
 			background: url('./images/COTWLogo.svg') no-repeat center center/cover;
 			position: absolute;
 			z-index: 1;
-			width: calc(900px/2);
-			height: calc(600px/2);
+			width: 50%;
+			height: 50%;
 			filter: blur(0) opacity(1);
 			transition: all 0.3s ease;
 		}
@@ -51,8 +53,9 @@
 		}
 
 		main .cotwImg img {
-			width: 900px;
-			height: 600px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 			justify-content: center;
 			align-items: center;
 			filter: blur(10px) brightness(0.8);
@@ -108,7 +111,11 @@
 
 	<main>
 		<section class="siteTitle">
-			<h1>Wheels of Fire</h1>
+			<h1>Wheels on Fire</h1>
+			<p>Welcome to Wheels on Fire. I demand absolute perfection from my engines—and occasionally from my
+				customers. Browse the
+				collection to find your next flawless ride, curated by a guy who definitely prefers the company of cars
+				over people.</p>
 		</section>
 
 		<section class="mainContent">
