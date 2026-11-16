@@ -1,4 +1,4 @@
-@import "/Fonts/fonts.css";
+@import "../Fonts/fonts.css";
 
 html,
 body {
@@ -10,15 +10,11 @@ body {
 body {
 	color: whitesmoke;
 	background-color: #222222;
-	background-image: url(/images/Texturelabs_Paper_354XL.jpg);
+	background-image: url(../images/Texturelabs_Paper_354XL.jpg);
 	background-size: contain;
 	background-position: center center;
 	background-attachment: fixed;
 	font-family: 'Roboto Slab', serif;
-}
-
-header {
-	
 }
 
 ul {
